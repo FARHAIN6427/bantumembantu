@@ -33,7 +33,7 @@
                         {{-- <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a> --}}
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
+                            <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Admin Register</a>
                         @endif
                     @endauth
                 </div>
@@ -54,9 +54,9 @@
 
                           <!-- Staff ID -->
                     <div>
-                        <x-input-label for="staffid" :value="__('staffid')" />
-                        <x-text-input id="staffid" class="block mt-1 w-full" type="staffid" name="staffid" :value="old('staffid')" required autofocus autocomplete="username" />
-                        <x-input-error :messages="$errors->get('staffid')" class="mt-2" />
+                        <x-input-label for="email" :value="__('Email')" />
+                        <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+                        <x-input-error :messages="$errors->get('email')" class="mt-2" />
                     </div>
 
                     <!-- Password -->
